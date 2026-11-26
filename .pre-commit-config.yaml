@@ -1,0 +1,10 @@
+# Blocks any commit containing a secret.
+# Setup: brew install gitleaks pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks-system
+        # Required: gitleaks scans staged changes itself. Without this, pre-commit
+        # passes file names, gitleaks fails on them and the hook still "Passes".
+        pass_filenames: false
