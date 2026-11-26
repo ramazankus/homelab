@@ -1,0 +1,33 @@
+# Secrets
+.env
+*.env
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+**/credentials*.json
+**/cert*.json
+**/token
+**/*token*
+id_rsa*
+id_ed25519*
+authorized_keys
+known_hosts
+
+# Data and state: never versioned
+**/priv/
+**/caddy/data/
+**/tailscale/
+*.sqlite
+*.db
+*.sql
+*.dump
+*.tar.zst
+*.vma*
+
+# OS / tooling
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
